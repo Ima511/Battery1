@@ -6,26 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintSnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#403935">
+            android:background="@color/ToolBarBackgroundColor">
 
             <RelativeLayout
+                android:id="@+id/linearLayoutCompat"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-                android:id="@+id/linearLayoutCompat">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/tv_BatteryFiction"
@@ -33,43 +30,130 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:text="Battery Fiction"
-                    android:textColor="@color/TitleColor"
-
-
+                    android:textColor="@color/BatteryFictionColor"
                     android:textSize="21sp"
+                    android:textStyle="bold|italic"
                     tools:layout_conversion_absoluteHeight="28dp"
                     tools:layout_conversion_absoluteWidth="134dp"
                     tools:layout_editor_absoluteX="16dp"
                     tools:layout_editor_absoluteY="14dp" />
-
-
             </RelativeLayout>
-
         </androidx.appcompat.widget.Toolbar>
 
-        <View  android:layout_width="match_parent"
+        <View
+            android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_below="@+id/tv_BatteryFiction"
-            android:background="#679faf"
+            android:background="@color/BatteryFictionColor" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/relColor"
+            android:padding="10dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginBottom="10dp"
+                tools:ignore="NotSibling"
+                tools:layout_editor_absoluteX="71dp"
+                tools:layout_editor_absoluteY="65dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_BatteryHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignParentStart="true"
+
+                android:text="@string/BatteryHealth"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="italic|bold"
+                />
+
+            <TextView
+                android:id="@+id/tv_TimeLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="@string/TimeLeft"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="italic"
+
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_BatteryHealth"
+            android:background="@color/ToolBarBackgroundColor" />
+
+        <RelativeLayout
+            android:id="@+id/rellay2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/relColor"
+            android:paddingTop="10dp"
+
+            >
+
+            <Button
+                android:id="@+id/btnOptimizeBattery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/ToolBarBackgroundColor"
+                android:text="@string/OptimizeBattery"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold|italic"
+                />
+
+            <TextView
+                android:id="@+id/tv_Discharging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnOptimizeBattery"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="@string/Discharging"
+                android:textColor="@color/BatteryFictionColor"
+                android:textSize="32sp"
+                android:paddingBottom="15dp"
+
+
+                />
+
+
+        </RelativeLayout>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_Discharging"
+            android:background="@color/ToolBarBackgroundColor"
             />
+
+
+
+
+
+
+
     </com.google.android.material.appbar.AppBarLayout>
-
-
-
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="160dp" />
-
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

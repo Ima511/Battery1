@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="TitleColor">#679faf</color>
+    <color name="relColor">#060606</color>
+    <color name="ToolBarBackgroundColor">#6C6A6F</color>
+    <color name="BatteryFictionColor">#00BFF4</color>
 </resources>

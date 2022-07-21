@@ -9,7 +9,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintSnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:text="Battery Fiction"
+                    android:text="@string/BatteryHealth"
                     android:textColor="@color/BatteryFictionColor"
                     android:textSize="21sp"
                     android:textStyle="bold|italic"
@@ -56,11 +56,13 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/toolbar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+
                 android:layout_marginBottom="10dp"
-                tools:ignore="NotSibling"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+
                 tools:layout_editor_absoluteX="71dp"
                 tools:layout_editor_absoluteY="65dp"
                 tools:srcCompat="@tools:sample/avatars" />
@@ -147,10 +149,228 @@
             android:background="@color/ToolBarBackgroundColor"
             />
 
+        <RelativeLayout
+            android:id="@+id/rellay3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/relColor">
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/info"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                />
+
+            <TextView
+                android:id="@+id/tv_BatteryInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/BatteryInformation"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic"
+
+                />
+
+        </RelativeLayout>
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_BatteryInfo"
+            android:background="@color/ToolBarBackgroundColor"
+
+            />
+        <RelativeLayout
+            android:id="@+id/rellay4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/relColor"
+            android:paddingBottom="20dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Temperature"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
 
 
+                android:text="@string/Technology"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_CycleCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:text="@string/CycleCount"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rellay5"
+            android:background="@color/relColor"
+            android:paddingBottom="10dp"
+
+            >
+
+            <TextView
+                android:id="@+id/tv_tempValue"
+                android:layout_width="wrap_content"
+                android:text="28&#xb0;C/82.4&#xb0;F"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_TechnologyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/TechnologyName"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="@+id/tv_TechnologyName"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+
+                android:text="@string/CycleCountValue"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/tv_BatteryInfo"
+            android:background="@color/ToolBarBackgroundColor"
 
 
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/relColor"
+            android:id="@+id/rellay6"
+            android:paddingTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_NominalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/NominalValue"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+
+                android:textColor="@color/white"
+                android:textSize="17sp"  />
+
+            <TextView
+                android:id="@+id/tv_Availability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+
+                android:text="@string/Availability"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_Condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+
+                android:text="@string/Condition"
+                android:textColor="@color/white"
+
+
+                android:textSize="17sp" />
+        </RelativeLayout>>
+
+            <RelativeLayout
+                android:id="@+id/rellay7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/relColor"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_NominalVolValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/NominalVolValue"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_AvailabilityValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/AvailabilityValue"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/conditionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+
+                    android:text="@string/ConditionValue"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@+id/tv_BatteryInfo"
+            android:background="@color/ToolBarBackgroundColor"
+
+
+            />
 
 
     </com.google.android.material.appbar.AppBarLayout>

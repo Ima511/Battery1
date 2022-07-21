@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // text as title
-        getSupportActionBar().setTitle("Battery Fiction");
+        getSupportActionBar().setTitle("Battery Health");
 
 
 

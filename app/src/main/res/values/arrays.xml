@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="autpsize_text_sizes">
+
+        <item>17sp</item>
+        <item>22sp</item>
+        <item>30sp</item>
+        <item>50sp</item>
+        <item>100sp</item>
+
+
+
+    </array>
+
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:title="Menu"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:id="@+id/menu_24"
+        android:enabled="true"
+        />
+
+    <item android:title="Battery"
+        android:icon="@drawable/ic_baseline_battery_std_24"
+        android:id="@+id/battery_24"
+        android:enabled="true"
+        />
+    <item android:title="More"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:id="@+id/morevert_24"
+        android:enabled="true"
+        />
+
+</menu>

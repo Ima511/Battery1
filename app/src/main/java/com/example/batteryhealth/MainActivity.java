@@ -1,14 +1,21 @@
 package com.example.batteryhealth;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.widget.TextViewCompat;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+    TextView textView2;
 
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 //        toolbar.setTitle("Battery Fiction");
+
 
     }
 }

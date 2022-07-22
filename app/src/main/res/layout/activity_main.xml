@@ -47,8 +47,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/relColor"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="314dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
 
 
         <View
@@ -77,17 +78,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
-            android:layout_alignEnd="@+id/imageView"
-            android:layout_alignParentStart="true"
 
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="28dp"
+
             android:text="@string/BatteryHealth"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="italic|bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="160dp" />
+
 
         <TextView
             android:id="@+id/tv_TimeLeft"
@@ -96,65 +95,46 @@
             android:layout_toRightOf="@+id/imageView"
             android:text="@string/TimeLeft"
             android:textColor="@color/white"
+
             android:textSize="20sp"
             android:textStyle="italic"
-
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <View
-
-            android:id="@+id/view5"
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_below="@+id/tv_Discharging"
-            android:layout_marginTop="25dp"
-            android:background="@color/ToolBarBackgroundColor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view6" />
+            tools:layout_editor_absoluteX="292dp"
+            tools:layout_editor_absoluteY="180dp" />
 
 
         <View
 
             android:id="@+id/view4"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="2dp"
             android:layout_below="@+id/tv_BatteryInfo"
 
+            android:layout_marginTop="5dp"
             android:background="@color/ToolBarBackgroundColor"
-            app:layout_constraintBottom_toTopOf="@+id/view6"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view3"
-            app:layout_constraintVertical_bias="0.298" />
+            app:layout_constraintTop_toTopOf="@+id/view6" />
 
         <TextView
             android:id="@+id/tv_Availability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-
-
-            android:layout_marginTop="25dp"
             android:text="@string/Availability"
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintEnd_toStartOf="@+id/tv_Condition"
-            app:layout_constraintStart_toEndOf="@+id/tv_NominalValue"
-            app:layout_constraintTop_toTopOf="@+id/view6" />
-
+            app:layout_constraintBottom_toBottomOf="@+id/tv_NominalValue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_NominalValue" />
 
         <TextView
             android:id="@+id/tv_NominalVolValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
             android:text="@string/NominalVolValue"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/view4"
             app:layout_constraintEnd_toEndOf="@+id/tv_NominalValue"
             app:layout_constraintStart_toStartOf="@+id/tv_NominalValue"
             app:layout_constraintTop_toBottomOf="@+id/tv_NominalValue" />
@@ -171,6 +151,7 @@
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -178,6 +159,7 @@
             android:id="@+id/btnOptimizeBattery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:backgroundTint="@color/ToolBarBackgroundColor"
             android:text="@string/OptimizeBattery"
             android:textAllCaps="false"
@@ -185,8 +167,11 @@
             android:textSize="21sp"
             android:textStyle="bold|italic"
             app:layout_constraintBottom_toTopOf="@+id/tv_Discharging"
-            app:layout_constraintTop_toTopOf="@+id/view2"
-            tools:layout_editor_absoluteX="0dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <View
             android:id="@+id/view2"
@@ -197,7 +182,10 @@
             android:background="@color/ToolBarBackgroundColor"
             app:layout_constraintBottom_toTopOf="@+id/btnOptimizeBattery"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/tv_Condition"
@@ -205,14 +193,14 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
 
-            android:layout_marginTop="25dp"
+
+            android:layout_marginTop="6dp"
             android:text="@string/Condition"
-
-
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintTop_toBottomOf="@+id/view6" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_NominalValue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_NominalValue" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -226,27 +214,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginTop="25dp"
-
+            android:layout_marginTop="5dp"
             android:text="@string/NominalValue"
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_Availability"
-            app:layout_constraintTop_toBottomOf="@+id/view6"
-            tools:layout_editor_absoluteX="16dp" />
+            app:layout_constraintBottom_toTopOf="@+id/tv_NominalVolValue"
+            app:layout_constraintEnd_toStartOf="@+id/tv_Condition"
+            app:layout_constraintStart_toEndOf="@+id/tv_Availability"
+            app:layout_constraintTop_toTopOf="@+id/view6" />
 
         <TextView
             android:id="@+id/tv_AvailabilityValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
             android:text="@string/AvailabilityValue"
             android:textColor="@color/white"
             android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_NominalVolValue"
             app:layout_constraintEnd_toEndOf="@+id/tv_Availability"
             app:layout_constraintStart_toStartOf="@+id/tv_Availability"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Availability" />
+            app:layout_constraintTop_toTopOf="@+id/tv_NominalVolValue" />
 
         <TextView
             android:id="@+id/conditionValue"
@@ -254,13 +242,13 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
 
-            android:layout_marginTop="15dp"
             android:text="@string/ConditionValue"
             android:textColor="@color/white"
             android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_NominalVolValue"
             app:layout_constraintEnd_toEndOf="@+id/tv_Condition"
             app:layout_constraintStart_toStartOf="@+id/tv_Condition"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Condition" />
+            app:layout_constraintTop_toTopOf="@+id/tv_NominalVolValue" />
 
         <TextView
             android:id="@+id/textView"
@@ -268,12 +256,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
 
-            android:layout_marginTop="10dp"
             android:text="@string/Temperature"
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/view4" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView2"
@@ -282,82 +270,63 @@
 
 
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:text="@string/Technology"
             android:textColor="@color/white"
             android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_TechnologyName"
             app:layout_constraintEnd_toStartOf="@+id/tv_CycleCount"
             app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/view4" />
+            app:layout_constraintTop_toTopOf="@+id/view4" />
 
         <TextView
             android:id="@+id/tv_CycleCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
             android:text="@string/CycleCount"
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHorizontal_bias="0.312"
-            app:layout_constraintStart_toEndOf="@+id/tv_Discharging"
-            app:layout_constraintTop_toBottomOf="@+id/view4" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
 
         <TextView
             android:id="@+id/tv_tempValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:text="28&#xb0;C/82.4&#xb0;F"
             android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_TechnologyName"
             app:layout_constraintEnd_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/tv_TechnologyName" />
 
         <TextView
             android:id="@+id/tv_TechnologyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="8dp"
             android:text="@string/TechnologyName"
             android:textColor="@color/white"
             android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_tempValue"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintEnd_toEndOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="16dp"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintGuide_begin="397dp" />
 
         <TextView
             android:id="@+id/tv_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:text="@string/info"
             android:textColor="@color/white"
             android:textSize="14sp"
             android:textStyle="italic"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/view3" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_BatteryInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_BatteryInfo" />
 
         <TextView
             android:id="@+id/tv_BatteryInfo"
@@ -365,15 +334,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
 
-            android:paddingBottom="10dp"
+
             android:text="@string/BatteryInformation"
             android:textColor="@color/white"
+
             android:textSize="14sp"
             android:textStyle="italic"
-
-            app:layout_constraintEnd_toEndOf="@+id/tv_CycleCount"
-            app:layout_constraintStart_toStartOf="@+id/tv_CycleCount"
-            tools:layout_editor_absoluteY="413dp" />
+            app:layout_constraintBottom_toTopOf="@+id/view6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
 
         <View
 
@@ -383,11 +352,14 @@
             android:layout_below="@+id/tv_BatteryInfo"
 
 
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:background="@color/ToolBarBackgroundColor"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Discharging" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_Discharging"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/tv_cycleCountValue"
@@ -395,28 +367,38 @@
             android:layout_height="wrap_content"
 
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:text="@string/CycleCountValue"
             android:textColor="@color/white"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/tv_TechnologyName"
             app:layout_constraintEnd_toEndOf="@+id/tv_CycleCount"
             app:layout_constraintStart_toStartOf="@+id/tv_CycleCount"
-            app:layout_constraintTop_toBottomOf="@+id/tv_CycleCount" />
+            app:layout_constraintTop_toTopOf="@+id/tv_TechnologyName" />
 
         <View
 
             android:id="@+id/view6"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="5dp"
             android:layout_below="@+id/tv_BatteryInfo"
 
 
+            android:layout_marginTop="10dp"
             android:background="@color/ToolBarBackgroundColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Discharging" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_Discharging"
+            app:layout_constraintVertical_bias="0.143" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="60dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

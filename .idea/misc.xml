@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2755102040816326" />
+        <entry key="app/src/main/res/drawable-anydpi/ic_action_battery.xml" value="0.1815" />
+        <entry key="app/src/main/res/drawable/charging.xml" value="0.1815" />
+        <entry key="app/src/main/res/drawable/ic_baseline_battery_std_24.xml" value="0.2265" />
+        <entry key="app/src/main/res/layout-v26/activity_main.xml" value="0.31875" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/appbar.xml" value="0.159375" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.31875" />
       </map>
     </option>
   </component>
